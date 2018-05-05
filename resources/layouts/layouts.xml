@@ -1,8 +1,17 @@
+<!DOCTYPE xml>
 <layouts>
     <layout id="MainLayout">
         <drawable class="Background" />
         <drawable id="frameDrawable" />
         <label id="DistanceValue" x="center" y="0" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_LARGE" />
+        <label id="TimeLabel" x="53" y="40" color="Gfx.COLOR_LT_GRAY" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_TINY" />
+        <label id="TimeValue" x="53" y="54" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_LARGE" />
+        <label id="PaceLabel" x="162" y="40" color="Gfx.COLOR_LT_GRAY" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_TINY" />
+        <label id="PaceValue" x="162" y="54" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_LARGE" />
+        <label id="CadenceLabel" x="53" y="95" color="Gfx.COLOR_LT_GRAY" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_TINY" />
+        <label id="CadenceValue" x="53" y="109" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_LARGE" />
+        <label id="AvgPaceLabel" x="162" y="95" color="Gfx.COLOR_LT_GRAY" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_TINY" />
+        <label id="AvgPaceValue" x="162" y="109" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_LARGE" />
         <label id="HRLabel" x="75" y="152" color="Gfx.COLOR_LT_GRAY" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_TINY" />
         <label id="HRValue" x="center" y="147" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_LARGE" />
     </layout>
