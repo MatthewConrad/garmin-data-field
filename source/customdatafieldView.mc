@@ -3,29 +3,20 @@ using Toybox.Graphics as Gfx;
 
 class customdatafieldView extends Ui.DataField {
 
-    hidden var distanceValue;
-    hidden var timerValueHours;
-    hidden var timerValueMinutes;
-    hidden var timerValueSeconds;
-    hidden var paceValueMinutes;
-    hidden var paceValueSeconds;
-    hidden var avgPaceValueMinutes;
-    hidden var avgPaceValueSeconds;
-    hidden var cadenceValue;
-    hidden var hrValue;
+    hidden var distanceValue = 0.00f;
+    hidden var elapsedTime = 0;
+    hidden var timerValueHours = 0;
+    hidden var timerValueMinutes = 0;
+    hidden var timerValueSeconds = 0;
+    hidden var paceValueMinutes = 0;
+    hidden var paceValueSeconds= 0;
+    hidden var avgPaceValueMinutes = 0;
+    hidden var avgPaceValueSeconds = 0;
+    hidden var cadenceValue = 0;
+    hidden var hrValue = 0;
 
     function initialize() {
         DataField.initialize();
-        distanceValue = 0.00f;
-        timerValueHours = 0;
-        timerValueMinutes = 0;
-        timerValueSeconds = 0;
-        paceValueMinutes = 0;
-        paceValueSeconds = 0;
-        avgPaceValueMinutes = 0;
-        avgPaceValueSeconds = 0;
-        cadenceValue = 0;
-        hrValue = 0;
     }
 
     // Set your layout here. Anytime the size of obscurity of
@@ -39,6 +30,14 @@ class customdatafieldView extends Ui.DataField {
         View.findDrawableById("CadenceLabel").setText("Cadence");
         View.findDrawableById("AvgPaceLabel").setText("Avg. Pace");
         return true;
+    }
+    
+    function convertToMinutesPerUnit(speed){
+    	if(System.DeviceSettings.distanceUnits == System.UNIT_STATUTE){
+        	return (26.8224 / speed);
+        }else{
+        	return (16.66667 / speed);
+        }
     }
     
     // The given info object contains all the current workout information.
@@ -58,24 +57,13 @@ class customdatafieldView extends Ui.DataField {
         	}
         }
         
-        if(info has :elapsedTime){
-        	if(info.elapsedTime != null){
-        		var time = (info.elapsedTime * 0.001).toNumber();
-        		timerValueHours = (time / 3600).toNumber();
-        		timerValueMinutes = ((time % 3600) / 60).toNumber();
-        		timerValueSeconds = ((time % 3600) % 60).toNumber();
-        	}else{
-        		timerValueHours = 0;
-        		timerValueMinutes = 0;
-        		timerValueSeconds = 0;
-        	}
-        }
+        elapsedTime = info.timerTime != null ? info.timerTime : 0;
         
-        if(info has :currentSpeed){
+       	if(info has :currentSpeed){
         	if(info.currentSpeed != null && info.currentSpeed > 0){
-        		var timePerMile = (1 / ((info.currentSpeed * 2.23694) / 60));
-        		paceValueMinutes = timePerMile.toNumber();
-        		paceValueSeconds = ((timePerMile - paceValueMinutes) * 60).toNumber();
+        		var timePerUnit = convertToMinutesPerUnit(info.currentSpeed);
+        		paceValueMinutes = timePerUnit.toNumber();
+        		paceValueSeconds = ((timePerUnit - paceValueMinutes) * 60).toNumber();
         	}else{
         		paceValueMinutes = 0;
         		paceValueSeconds = 0;
@@ -84,9 +72,9 @@ class customdatafieldView extends Ui.DataField {
         
         if(info has :averageSpeed){
         	if(info.averageSpeed != null && info.averageSpeed > 0){
-        		var avgTimePerMile = (1 / ((info.averageSpeed * 2.23694) / 60));
-        		avgPaceValueMinutes = avgTimePerMile.toNumber();
-        		avgPaceValueSeconds = ((avgTimePerMile - avgPaceValueMinutes) * 60).toNumber();
+        		var timePerUnit = convertToMinutesPerUnit(info.averageSpeed);
+        		avgPaceValueMinutes = timePerUnit.toNumber();
+        		avgPaceValueSeconds = ((timePerUnit - avgPaceValueMinutes) * 60).toNumber();
         	}else{
         		avgPaceValueMinutes = 0;
         		avgPaceValueSeconds = 0;
@@ -145,36 +133,49 @@ class customdatafieldView extends Ui.DataField {
         	distance.setFont(Graphics.FONT_MEDIUM);
         }
         
-        if(timerValueHours > 0 || timerValueMinutes > 0 || timerValueSeconds > 0){
+        var timeText;
+		if(elapsedTime != null && elapsedTime > 0){
+			var seconds = (elapsedTime * 0.001).toNumber();
+			timerValueHours = (seconds / 3600).toNumber();
+        	timerValueMinutes = ((seconds % 3600) / 60).toNumber();
+        	timerValueSeconds = ((seconds % 3600) % 60).toNumber();
+        	
         	if(timerValueHours > 0){
         		time.setFont(Graphics.FONT_MEDIUM);
-        		time.setText(timerValueHours.format("%d")+":"+timerValueMinutes.format("%02d")+":"+timerValueSeconds.format("%02d"));
+        		timeText = timerValueHours.format("%d")+":"+timerValueMinutes.format("%02d")+":"+timerValueSeconds.format("%02d");
         	}else{
-        		time.setText(timerValueMinutes.format("%d")+":"+timerValueSeconds.format("%02d"));
+        		timeText = timerValueMinutes.format("%d")+":"+timerValueSeconds.format("%02d");
         	}
         } else{
-        	time.setText("0:00");
+        	timeText = "0:00";
         }
+        time.setText(timeText);
         
+        var paceText;
         if(paceValueMinutes > 0 || paceValueSeconds > 0){
-        	pace.setText(paceValueMinutes.format("%d")+":"+paceValueSeconds.format("%02d"));
+        	paceText = paceValueMinutes.format("%d")+":"+paceValueSeconds.format("%02d");
         }else {
-        	pace.setText("--:--");
+        	paceText = "--:--";
         }
+        pace.setText(paceText);
         
-        if(avgPaceValueMinutes > 0 || avgPaceValueSeconds > 0){
-        	avgPace.setText(avgPaceValueMinutes.format("%d")+":"+avgPaceValueSeconds.format("%02d"));
+        var avgPaceText;
+        if((avgPaceValueMinutes > 0 || avgPaceValueSeconds > 0) && elapsedTime > 10000){
+        	avgPaceText = avgPaceValueMinutes.format("%d")+":"+avgPaceValueSeconds.format("%02d");
         }else {
-        	avgPace.setText("--:--");
+        	avgPaceText = "--:--";
         }
+        avgPace.setText(avgPaceText);
         
 		cadence.setText(cadenceValue.format("%d"));
 		
+		var hrText;
         if (hrValue == 0) {
-        	hr.setText("--");
+        	hrText = "--";
         } else {
-        	hr.setText(hrValue.format("%d"));
+        	hrText = hrValue.format("%d");
 		}
+		hr.setText(hrText);
 		
         // Call parent's onUpdate(dc) to redraw the layout
         View.onUpdate(dc);
