@@ -3,17 +3,15 @@ using Toybox.Graphics as Gfx;
 
 class customdatafieldView extends Ui.DataField {
 
-    hidden var distanceValue = 0.00f;
+    hidden var elapsedDistance = 0.00f;
     hidden var elapsedTime = 0;
-    hidden var timerValueHours = 0;
-    hidden var timerValueMinutes = 0;
-    hidden var timerValueSeconds = 0;
     hidden var paceValueMinutes = 0;
     hidden var paceValueSeconds= 0;
     hidden var avgPaceValueMinutes = 0;
     hidden var avgPaceValueSeconds = 0;
     hidden var cadenceValue = 0;
     hidden var hrValue = 0;
+    hidden var iteration = 0;
 
     function initialize() {
         DataField.initialize();
@@ -45,18 +43,8 @@ class customdatafieldView extends Ui.DataField {
     // Note that compute() and onUpdate() are asynchronous, and there is no
     // guarantee that compute() will be called before onUpdate().
     function compute(info) {
-        if(info has :elapsedDistance){
-        	if(info.elapsedDistance != null){
-        		if(System.DeviceSettings.distanceUnits == System.UNIT_STATUTE){
-        			distanceValue = info.elapsedDistance * 0.000621371;
-        		} else {
-        			distanceValue = info.elapsedDistance * 0.001;
-        		}
-        	}else{
-        		distanceValue = 0.00f;
-        	}
-        }
-        
+    
+        elapsedDistance = info.elapsedDistance != null ? info.elapsedDistance : 0.00f;        
         elapsedTime = info.timerTime != null ? info.timerTime : 0;
         
        	if(info has :currentSpeed){
@@ -81,26 +69,16 @@ class customdatafieldView extends Ui.DataField {
         	}
         }
         
-        if(info has :currentCadence){
-        	if(info.currentCadence != null){
-        		cadenceValue = info.currentCadence;
-        	} else {
-        		cadenceValue = 0;
-        	}
-        }
+        cadenceValue = info.currentCadence != null ? info.currentCadence : 0;
+        hrValue = info.currentHeartRate != null ? info.currentHeartRate : 0;
         
-        if(info has :currentHeartRate){
-            if(info.currentHeartRate != null){
-                hrValue = info.currentHeartRate;
-            } else {
-                hrValue = 0;
-            }
-        }
     }
 
     // Display the value you computed here. This will be called
     // once a second when the data field is visible.
     function onUpdate(dc) {
+    	// going to use to tell some things when to refresh
+    	iteration += 1;
     	
         // Set the background color
         View.findDrawableById("Background").setColor(getBackgroundColor());
@@ -128,17 +106,22 @@ class customdatafieldView extends Ui.DataField {
             hr.setColor(Gfx.COLOR_BLACK);
         }
         
+        var distanceValue = elapsedDistance * 0.001;
+        if(System.DeviceSettings.distanceUnits == System.UNIT_STATUTE){
+        	distanceValue = distanceValue * 0.000621371;
+        }
         distance.setText(distanceValue.format("%.2f") + " mi");
+        
         if(distanceValue > 10.0){
         	distance.setFont(Graphics.FONT_MEDIUM);
         }
         
         var timeText;
+        var seconds = (elapsedTime * 0.001).toNumber();
 		if(elapsedTime != null && elapsedTime > 0){
-			var seconds = (elapsedTime * 0.001).toNumber();
-			timerValueHours = (seconds / 3600).toNumber();
-        	timerValueMinutes = ((seconds % 3600) / 60).toNumber();
-        	timerValueSeconds = ((seconds % 3600) % 60).toNumber();
+			var timerValueHours = (seconds / 3600).toNumber();
+        	var timerValueMinutes = ((seconds % 3600) / 60).toNumber();
+        	var timerValueSeconds = ((seconds % 3600) % 60).toNumber();
         	
         	if(timerValueHours > 0){
         		time.setFont(Graphics.FONT_MEDIUM);
@@ -156,16 +139,26 @@ class customdatafieldView extends Ui.DataField {
         	paceText = paceValueMinutes.format("%d")+":"+paceValueSeconds.format("%02d");
         }else {
         	paceText = "--:--";
+        	pace.setText(paceText);
         }
-        pace.setText(paceText);
+        
+        // only update the current pace every 2 seconds
+        if(iteration % 2 == 0){
+        	pace.setText(paceText);
+        }
         
         var avgPaceText;
-        if((avgPaceValueMinutes > 0 || avgPaceValueSeconds > 0) && elapsedTime > 10000){
+        if((avgPaceValueMinutes > 0 || avgPaceValueSeconds > 0) && iteration >= 10){
         	avgPaceText = avgPaceValueMinutes.format("%d")+":"+avgPaceValueSeconds.format("%02d");
         }else {
         	avgPaceText = "--:--";
+        	avgPace.setText(avgPaceText);
         }
-        avgPace.setText(avgPaceText);
+        
+        // only update the average pace every 10 seconds
+        if(iteration % 10 == 0){
+        	avgPace.setText(avgPaceText);
+        }
         
 		cadence.setText(cadenceValue.format("%d"));
 		
