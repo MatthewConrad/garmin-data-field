@@ -40,7 +40,7 @@ class customdatafieldView extends Ui.DataField {
         View.findDrawableById("AvgPaceLabel").setText("Avg. Pace");
         return true;
     }
-
+    
     // The given info object contains all the current workout information.
     // Calculate a value and save it locally in this method.
     // Note that compute() and onUpdate() are asynchronous, and there is no
@@ -68,6 +68,28 @@ class customdatafieldView extends Ui.DataField {
         		timerValueHours = 0;
         		timerValueMinutes = 0;
         		timerValueSeconds = 0;
+        	}
+        }
+        
+        if(info has :currentSpeed){
+        	if(info.currentSpeed != null && info.currentSpeed > 0){
+        		var timePerMile = (1 / ((info.currentSpeed * 2.23694) / 60));
+        		paceValueMinutes = timePerMile.toNumber();
+        		paceValueSeconds = ((timePerMile - paceValueMinutes) * 60).toNumber();
+        	}else{
+        		paceValueMinutes = 0;
+        		paceValueSeconds = 0;
+        	}
+        }
+        
+        if(info has :averageSpeed){
+        	if(info.averageSpeed != null && info.averageSpeed > 0){
+        		var avgTimePerMile = (1 / ((info.averageSpeed * 2.23694) / 60));
+        		avgPaceValueMinutes = avgTimePerMile.toNumber();
+        		avgPaceValueSeconds = ((avgTimePerMile - avgPaceValueMinutes) * 60).toNumber();
+        	}else{
+        		avgPaceValueMinutes = 0;
+        		avgPaceValueSeconds = 0;
         	}
         }
         
@@ -134,9 +156,18 @@ class customdatafieldView extends Ui.DataField {
         	time.setText("0:00");
         }
         
-        pace.setText("--:--");
-        avgPace.setText("--:--");
-
+        if(paceValueMinutes > 0 || paceValueSeconds > 0){
+        	pace.setText(paceValueMinutes.format("%d")+":"+paceValueSeconds.format("%02d"));
+        }else {
+        	pace.setText("--:--");
+        }
+        
+        if(avgPaceValueMinutes > 0 || avgPaceValueSeconds > 0){
+        	avgPace.setText(avgPaceValueMinutes.format("%d")+":"+avgPaceValueSeconds.format("%02d"));
+        }else {
+        	avgPace.setText("--:--");
+        }
+        
 		cadence.setText(cadenceValue.format("%d"));
 		
         if (hrValue == 0) {
