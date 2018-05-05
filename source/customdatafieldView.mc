@@ -3,8 +3,10 @@ using Toybox.Graphics as Gfx;
 
 class customdatafieldView extends Ui.DataField {
 
-    hidden var elapsedDistance = 0.00f;
+	hidden var elapsedDistance = 0;
     hidden var elapsedTime = 0;
+    hidden var currentSpeed = 0;
+    hidden var averageSpeed = 0;
     hidden var paceValueMinutes = 0;
     hidden var paceValueSeconds= 0;
     hidden var avgPaceValueMinutes = 0;
@@ -16,22 +18,9 @@ class customdatafieldView extends Ui.DataField {
     function initialize() {
         DataField.initialize();
     }
-
-    // Set your layout here. Anytime the size of obscurity of
-    // the draw context is changed this will be called.
-    function onLayout(dc) {
-        View.setLayout(Rez.Layouts.MainLayout(dc));
         
-        View.findDrawableById("HRLabel").setText("HR");
-        View.findDrawableById("TimeLabel").setText("Timer");
-        View.findDrawableById("PaceLabel").setText("Pace");
-        View.findDrawableById("CadenceLabel").setText("Cadence");
-        View.findDrawableById("AvgPaceLabel").setText("Avg. Pace");
-        return true;
-    }
-    
     function convertToMinutesPerUnit(speed){
-    	if(System.DeviceSettings.distanceUnits == System.UNIT_STATUTE){
+    	if(System.getDeviceSettings().distanceUnits == System.UNIT_STATUTE){
         	return (26.8224 / speed);
         }else{
         	return (16.66667 / speed);
@@ -44,31 +33,10 @@ class customdatafieldView extends Ui.DataField {
     // guarantee that compute() will be called before onUpdate().
     function compute(info) {
     
-        elapsedDistance = info.elapsedDistance != null ? info.elapsedDistance : 0.00f;        
+        elapsedDistance = info.elapsedDistance != null ? info.elapsedDistance : 0;
         elapsedTime = info.timerTime != null ? info.timerTime : 0;
-        
-       	if(info has :currentSpeed){
-        	if(info.currentSpeed != null && info.currentSpeed > 0){
-        		var timePerUnit = convertToMinutesPerUnit(info.currentSpeed);
-        		paceValueMinutes = timePerUnit.toNumber();
-        		paceValueSeconds = ((timePerUnit - paceValueMinutes) * 60).toNumber();
-        	}else{
-        		paceValueMinutes = 0;
-        		paceValueSeconds = 0;
-        	}
-        }
-        
-        if(info has :averageSpeed){
-        	if(info.averageSpeed != null && info.averageSpeed > 0){
-        		var timePerUnit = convertToMinutesPerUnit(info.averageSpeed);
-        		avgPaceValueMinutes = timePerUnit.toNumber();
-        		avgPaceValueSeconds = ((timePerUnit - avgPaceValueMinutes) * 60).toNumber();
-        	}else{
-        		avgPaceValueMinutes = 0;
-        		avgPaceValueSeconds = 0;
-        	}
-        }
-        
+        currentSpeed = info.currentSpeed != null ? info.currentSpeed : 0;
+        averageSpeed = info.averageSpeed != null ? info.averageSpeed : 0;     
         cadenceValue = info.currentCadence != null ? info.currentCadence : 0;
         hrValue = info.currentHeartRate != null ? info.currentHeartRate : 0;
         
@@ -80,40 +48,46 @@ class customdatafieldView extends Ui.DataField {
     	// going to use to tell some things when to refresh
     	iteration += 1;
     	
+    	var width = dc.getWidth();
+    	var height = dc.getHeight();
+    	
+    	var backgroundColor = getBackgroundColor();
+    	var valueColor = backgroundColor == Graphics.COLOR_WHITE ? Graphics.COLOR_BLACK : Graphics.COLOR_WHITE;
+    	var labelColor = backgroundColor == Graphics.COLOR_WHITE ? Graphics.COLOR_DK_GRAY : Graphics.COLOR_LT_GRAY;
+    	var valueSize = Graphics.FONT_LARGE;
+    	var labelSize = Graphics.FONT_TINY; 
+    	
         // Set the background color
-        View.findDrawableById("Background").setColor(getBackgroundColor());
-
-        // Set the foreground color and value
-        var distance = View.findDrawableById("DistanceValue");
-        var time = View.findDrawableById("TimeValue");
-        var pace = View.findDrawableById("PaceValue");
-        var cadence = View.findDrawableById("CadenceValue");
-        var avgPace = View.findDrawableById("AvgPaceValue");
-        var hr = View.findDrawableById("HRValue");
-        if (getBackgroundColor() == Gfx.COLOR_BLACK) {
-            distance.setColor(Gfx.COLOR_WHITE);
-            time.setColor(Gfx.COLOR_WHITE);
-            pace.setColor(Gfx.COLOR_WHITE);
-            cadence.setColor(Gfx.COLOR_WHITE);
-            avgPace.setColor(Gfx.COLOR_WHITE);
-            hr.setColor(Gfx.COLOR_WHITE);
-        } else {
-            distance.setColor(Gfx.COLOR_BLACK);
-            time.setColor(Gfx.COLOR_BLACK);
-            pace.setColor(Gfx.COLOR_BLACK);
-            cadence.setColor(Gfx.COLOR_BLACK);
-            avgPace.setColor(Gfx.COLOR_BLACK);
-            hr.setColor(Gfx.COLOR_BLACK);
-        }
+        dc.setColor(backgroundColor, backgroundColor);
+        dc.fillRectangle(0, 0, width, height);
+        
+        // Draw grid
+        dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+        dc.setPenWidth(2);
+        dc.drawLine(0, 35, width, 35);
+        dc.drawLine(0, height / 2, width, height / 2);
+        dc.drawLine(0, 145, width, 145);
+        dc.drawLine(width / 2, 35, width / 2, 145);
+        
+        // Draw Labels
+        dc.setColor(labelColor, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(53, 40, labelSize, "Timer", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(162, 40, labelSize, "Pace", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(53, 95, labelSize, "Cadence", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(162, 95, labelSize, "Avg. Pace", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(75, 152, labelSize, "HR", Graphics.TEXT_JUSTIFY_CENTER);
+        
+        dc.setColor(valueColor, Graphics.COLOR_TRANSPARENT);
         
         var distanceValue = elapsedDistance * 0.001;
-        if(System.DeviceSettings.distanceUnits == System.UNIT_STATUTE){
-        	distanceValue = distanceValue * 0.000621371;
+        if(System.getDeviceSettings().distanceUnits == System.UNIT_STATUTE){
+        	distanceValue = elapsedDistance * 0.000621371;
         }
-        distance.setText(distanceValue.format("%.2f") + " mi");
         
         if(distanceValue > 10.0){
-        	distance.setFont(Graphics.FONT_MEDIUM);
+        	dc.drawText(width / 2, 0, Graphics.FONT_MEDIUM, distanceValue.format("%.2f") + " mi", Graphics.TEXT_JUSTIFY_CENTER);
+        }else{
+        	dc.drawText(width / 2, 0, valueSize, distanceValue.format("%.2f") + " mi", Graphics.TEXT_JUSTIFY_CENTER);
         }
         
         var timeText;
@@ -124,43 +98,46 @@ class customdatafieldView extends Ui.DataField {
         	var timerValueSeconds = ((seconds % 3600) % 60).toNumber();
         	
         	if(timerValueHours > 0){
-        		time.setFont(Graphics.FONT_MEDIUM);
         		timeText = timerValueHours.format("%d")+":"+timerValueMinutes.format("%02d")+":"+timerValueSeconds.format("%02d");
+        		dc.drawText(53, 54, Graphics.FONT_MEDIUM, timeText, Graphics.TEXT_JUSTIFY_CENTER);
         	}else{
         		timeText = timerValueMinutes.format("%d")+":"+timerValueSeconds.format("%02d");
+        		dc.drawText(53, 54, valueSize, timeText, Graphics.TEXT_JUSTIFY_CENTER);
         	}
         } else{
         	timeText = "0:00";
+        	dc.drawText(53, 54, valueSize, timeText, Graphics.TEXT_JUSTIFY_CENTER);
         }
-        time.setText(timeText);
         
         var paceText;
-        if(paceValueMinutes > 0 || paceValueSeconds > 0){
+  		    
+        if(currentSpeed > 0){
+        	if(iteration <= 2 || iteration % 2 == 0){
+        		var timePerUnit = convertToMinutesPerUnit(currentSpeed);
+        		paceValueMinutes = timePerUnit.toNumber();
+        		paceValueSeconds = ((timePerUnit - paceValueMinutes) * 60).toNumber();
+        	}
         	paceText = paceValueMinutes.format("%d")+":"+paceValueSeconds.format("%02d");
         }else {
         	paceText = "--:--";
-        	pace.setText(paceText);
         }
         
-        // only update the current pace every 2 seconds
-        if(iteration % 2 == 0){
-        	pace.setText(paceText);
-        }
+        dc.drawText(162, 54, valueSize, paceText, Graphics.TEXT_JUSTIFY_CENTER);
         
         var avgPaceText;
-        if((avgPaceValueMinutes > 0 || avgPaceValueSeconds > 0) && iteration >= 10){
+        if(averageSpeed > 0){
+        	if(iteration % 10 == 0){
+        		var timePerUnit = convertToMinutesPerUnit(averageSpeed);
+        		avgPaceValueMinutes = timePerUnit.toNumber();
+        		avgPaceValueSeconds = ((timePerUnit - avgPaceValueMinutes) * 60).toNumber();
+        	}
         	avgPaceText = avgPaceValueMinutes.format("%d")+":"+avgPaceValueSeconds.format("%02d");
         }else {
         	avgPaceText = "--:--";
-        	avgPace.setText(avgPaceText);
         }
+        dc.drawText(162, 109, valueSize, avgPaceText, Graphics.TEXT_JUSTIFY_CENTER);
         
-        // only update the average pace every 10 seconds
-        if(iteration % 10 == 0){
-        	avgPace.setText(avgPaceText);
-        }
-        
-		cadence.setText(cadenceValue.format("%d"));
+		dc.drawText(53, 109, valueSize, cadenceValue.format("%d"), Graphics.TEXT_JUSTIFY_CENTER);
 		
 		var hrText;
         if (hrValue == 0) {
@@ -168,10 +145,8 @@ class customdatafieldView extends Ui.DataField {
         } else {
         	hrText = hrValue.format("%d");
 		}
-		hr.setText(hrText);
-		
-        // Call parent's onUpdate(dc) to redraw the layout
-        View.onUpdate(dc);
+		dc.drawText(width / 2, 147, valueSize, hrText, Graphics.TEXT_JUSTIFY_CENTER);
+
     }
 
 }
