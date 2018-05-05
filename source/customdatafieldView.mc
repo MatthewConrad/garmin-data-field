@@ -3,46 +3,24 @@ using Toybox.Graphics as Gfx;
 
 class customdatafieldView extends Ui.DataField {
 
-    hidden var mValue;
-    hidden var sValue;
+    hidden var distanceValue;
+    hidden var hrValue;
 
     function initialize() {
         DataField.initialize();
-        mValue = 0.0f;
-        sValue = 0.0f;
+        distanceValue = 0.00f;
+        hrValue = 0.0f;
     }
 
     // Set your layout here. Anytime the size of obscurity of
     // the draw context is changed this will be called.
     function onLayout(dc) {
-    	var label = "HR";
-        var obscurityFlags = DataField.getObscurityFlags();
+        View.setLayout(Rez.Layouts.MainLayout(dc));
+        var labelView = View.findDrawableById("label");
+        var valueView = View.findDrawableById("value");
 
-        // Top left quadrant so we'll use the top left layout
-        if (obscurityFlags == (OBSCURE_TOP | OBSCURE_LEFT)) {
-            View.setLayout(Rez.Layouts.TopLeftLayout(dc));
-
-        // Top right quadrant so we'll use the top right layout
-        } else if (obscurityFlags == (OBSCURE_TOP | OBSCURE_RIGHT)) {
-            View.setLayout(Rez.Layouts.TopRightLayout(dc));
-
-        // Bottom left quadrant so we'll use the bottom left layout
-        } else if (obscurityFlags == (OBSCURE_BOTTOM | OBSCURE_LEFT)) {
-            View.setLayout(Rez.Layouts.BottomLeftLayout(dc));
-
-        // Bottom right quadrant so we'll use the bottom right layout
-        } else if (obscurityFlags == (OBSCURE_BOTTOM | OBSCURE_RIGHT)) {
-            View.setLayout(Rez.Layouts.BottomRightLayout(dc));
-
-        // Use the generic, centered layout
-        } else {
-            View.setLayout(Rez.Layouts.MainLayout(dc));
-            var labelView = View.findDrawableById("label");
-            var valueView = View.findDrawableById("value");
-        }
-
-        View.findDrawableById("MainLabel").setText("HR");
-        View.findDrawableById("SecondLabel").setText("Cadence");
+//        View.findDrawableById("DistanceLabel").setText("Distance");
+        View.findDrawableById("HRLabel").setText("HR");
         return true;
     }
 
@@ -54,17 +32,18 @@ class customdatafieldView extends Ui.DataField {
         // See Activity.Info in the documentation for available information.
         if(info has :currentHeartRate){
             if(info.currentHeartRate != null){
-                mValue = info.currentHeartRate;
+                hrValue = info.currentHeartRate;
             } else {
-                mValue = 0.0f;
+                hrValue = 0.0f;
             }
         }
         
-        if(info has :currentCadence){
-        	if(info.currentCadence != null){
-        		sValue = info.currentCadence;
+        if(info has :elapsedDistance){
+        	if(info.elapsedDistance != null){
+        		System.println(info.elapsedDistance);
+        		distanceValue = info.elapsedDistance * 0.000621371;
         	}else{
-        		sValue = 0.0f;
+        		distanceValue = 0.00f;
         	}
         }
     }
@@ -72,21 +51,22 @@ class customdatafieldView extends Ui.DataField {
     // Display the value you computed here. This will be called
     // once a second when the data field is visible.
     function onUpdate(dc) {
+    	
         // Set the background color
         View.findDrawableById("Background").setColor(getBackgroundColor());
 
         // Set the foreground color and value
-        var value = View.findDrawableById("MainValue");
-        var value2 = View.findDrawableById("SecondValue");
+        var distance = View.findDrawableById("DistanceValue");
+        var hr = View.findDrawableById("HRValue");
         if (getBackgroundColor() == Gfx.COLOR_BLACK) {
-            value.setColor(Gfx.COLOR_WHITE);
-            value2.setColor(Gfx.COLOR_WHITE);
+            distance.setColor(Gfx.COLOR_WHITE);
+            hr.setColor(Gfx.COLOR_WHITE);
         } else {
-            value.setColor(Gfx.COLOR_BLACK);
-            value2.setColor(Gfx.COLOR_BLACK);
+            distance.setColor(Gfx.COLOR_BLACK);
+            hr.setColor(Gfx.COLOR_BLACK);
         }
-        value.setText(mValue.format("%d"));
-        value2.setText(sValue.format("%d"));
+        distance.setText(distanceValue.format("%.2f") + " mi");
+        hr.setText(hrValue.format("%d"));
 
         // Call parent's onUpdate(dc) to redraw the layout
         View.onUpdate(dc);

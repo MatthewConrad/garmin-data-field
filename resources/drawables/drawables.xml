@@ -1,3 +1,10 @@
 <drawables>
     <bitmap id="LauncherIcon" filename="launcher_icon.png" />
+    
+    <drawable-list id="frameDrawable">
+    	<shape type="rectangle" x="0" y="35" width="fill" height="2" color="Gfx.COLOR_RED" />
+    	<shape type="rectangle" x="0" y="center" width="fill" height="2" color="Gfx.COLOR_RED" />
+    	<shape type="rectangle" x="0" y="145" width="fill" height="2" color="Gfx.COLOR_RED" />
+    	<shape type="rectangle" x="center" y="35" width="2" height="110" color="Gfx.COLOR_RED" />
+    </drawable-list>
 </drawables>
