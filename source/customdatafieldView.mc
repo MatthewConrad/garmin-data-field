@@ -4,11 +4,18 @@ using Toybox.Graphics as Gfx;
 class customdatafieldView extends Ui.DataField {
 
 	hidden var elapsedDistance = 0;
+	hidden var lapStartDistance = 0;
+	hidden var lapDistance = 0;
     hidden var elapsedTime = 0;
+    hidden var lapStartTime = 0;
+    hidden var lapTime = 0;
     hidden var currentSpeed = 0;
+    hidden var lapSpeed = 0;
     hidden var averageSpeed = 0;
     hidden var paceValueMinutes = 0;
     hidden var paceValueSeconds= 0;
+    hidden var lapPaceValueMinutes = 0;
+    hidden var lapPaceValueSeconds = 0;
     hidden var avgPaceValueMinutes = 0;
     hidden var avgPaceValueSeconds = 0;
     hidden var cadenceValue = 0;
@@ -35,11 +42,19 @@ class customdatafieldView extends Ui.DataField {
     
         elapsedDistance = info.elapsedDistance != null ? info.elapsedDistance : 0;
         elapsedTime = info.timerTime != null ? info.timerTime : 0;
+        lapDistance = elapsedDistance - lapStartDistance;
+        lapTime = elapsedTime - lapStartTime;
         currentSpeed = info.currentSpeed != null ? info.currentSpeed : 0;
+        lapSpeed = lapDistance > 0 ? lapDistance / lapTime : 0;
         averageSpeed = info.averageSpeed != null ? info.averageSpeed : 0;     
         cadenceValue = info.currentCadence != null ? info.currentCadence : 0;
         hrValue = info.currentHeartRate != null ? info.currentHeartRate : 0;
         
+    }
+    
+    function onTimerLap(){
+    	lapStartDistance = elapsedDistance;
+    	lapStartTime = elapsedTime;
     }
 
     // Display the value you computed here. This will be called
@@ -55,7 +70,10 @@ class customdatafieldView extends Ui.DataField {
     	var valueColor = backgroundColor == Graphics.COLOR_WHITE ? Graphics.COLOR_BLACK : Graphics.COLOR_WHITE;
     	var labelColor = backgroundColor == Graphics.COLOR_WHITE ? Graphics.COLOR_DK_GRAY : Graphics.COLOR_LT_GRAY;
     	var valueSize = Graphics.FONT_LARGE;
-    	var labelSize = Graphics.FONT_TINY; 
+    	var labelSize = Graphics.FONT_TINY;
+    	
+    	var distanceYPosition = (height > 214) ? height * .04 : height * .03;
+    	var distanceSize = (height > 214) ? Graphics.FONT_MEDIUM : Graphics.FONT_LARGE; 
     	
         // Set the background color
         dc.setColor(backgroundColor, backgroundColor);
@@ -64,31 +82,32 @@ class customdatafieldView extends Ui.DataField {
         // Draw grid
         dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(2);
-        dc.drawLine(0, 35, width, 35);
-        dc.drawLine(0, height / 2, width, height / 2);
-        dc.drawLine(0, 145, width, 145);
-        dc.drawLine(width / 2, 35, width / 2, 145);
+        dc.drawLine(0, height * .2, width, height * .2);
+        dc.drawLine(0, height * .5, width, height * .5);
+        dc.drawLine(0, height * .8, width, height * .8);
+        dc.drawLine(width * .5, height * .2, width * .5, height * .8);
         
-        // Draw Labels
-        dc.setColor(labelColor, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(53, 40, labelSize, "Timer", Graphics.TEXT_JUSTIFY_CENTER);
-        dc.drawText(162, 40, labelSize, "Pace", Graphics.TEXT_JUSTIFY_CENTER);
-        dc.drawText(53, 95, labelSize, "Cadence", Graphics.TEXT_JUSTIFY_CENTER);
-        dc.drawText(162, 95, labelSize, "Avg. Pace", Graphics.TEXT_JUSTIFY_CENTER);
-        dc.drawText(75, 152, labelSize, "HR", Graphics.TEXT_JUSTIFY_CENTER);
-        
-        dc.setColor(valueColor, Graphics.COLOR_TRANSPARENT);
-        
+        // this is going up here because we're gonna shift some stuff based on distance
         var distanceValue = elapsedDistance * 0.001;
         if(System.getDeviceSettings().distanceUnits == System.UNIT_STATUTE){
         	distanceValue = elapsedDistance * 0.000621371;
         }
         
-        if(distanceValue > 10.0){
-        	dc.drawText(width / 2, 0, Graphics.FONT_MEDIUM, distanceValue.format("%.2f") + " mi", Graphics.TEXT_JUSTIFY_CENTER);
-        }else{
-        	dc.drawText(width / 2, 0, valueSize, distanceValue.format("%.2f") + " mi", Graphics.TEXT_JUSTIFY_CENTER);
-        }
+        var distanceLabelX = (distanceValue > 10.0) ? width * .675 : width * .6375;
+        var distanceXPosition = (distanceValue > 10.0) ? width / 2 : width * .4625;
+        
+        // Draw Labels
+        dc.setColor(labelColor, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(distanceLabelX, height * .0725, labelSize, "mi", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(width * .25, height * .22, labelSize, "Timer", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(width * .75, height * .22, labelSize, "Pace", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(width * .25, height * .52, labelSize, "Avg. Pace", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(width * .75, height * .52, labelSize, "Lap Pace", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(width * .33, height * .82, labelSize, "HR", Graphics.TEXT_JUSTIFY_CENTER);
+        
+        dc.setColor(valueColor, Graphics.COLOR_TRANSPARENT);
+                
+        dc.drawText(distanceXPosition, distanceYPosition, valueSize, distanceValue.format("%.2f"), Graphics.TEXT_JUSTIFY_CENTER);
         
         var timeText;
         var seconds = (elapsedTime * 0.001).toNumber();
@@ -99,14 +118,14 @@ class customdatafieldView extends Ui.DataField {
         	
         	if(timerValueHours > 0){
         		timeText = timerValueHours.format("%d")+":"+timerValueMinutes.format("%02d")+":"+timerValueSeconds.format("%02d");
-        		dc.drawText(53, 54, Graphics.FONT_MEDIUM, timeText, Graphics.TEXT_JUSTIFY_CENTER);
+        		dc.drawText(width * .25, height * .31, Graphics.FONT_MEDIUM, timeText, Graphics.TEXT_JUSTIFY_CENTER);
         	}else{
         		timeText = timerValueMinutes.format("%d")+":"+timerValueSeconds.format("%02d");
-        		dc.drawText(53, 54, valueSize, timeText, Graphics.TEXT_JUSTIFY_CENTER);
+        		dc.drawText(width * .25, height * .31, valueSize, timeText, Graphics.TEXT_JUSTIFY_CENTER);
         	}
         } else{
         	timeText = "0:00";
-        	dc.drawText(53, 54, valueSize, timeText, Graphics.TEXT_JUSTIFY_CENTER);
+        	dc.drawText(width * .25, height * .315, valueSize, timeText, Graphics.TEXT_JUSTIFY_CENTER);
         }
         
         var paceText;
@@ -117,12 +136,39 @@ class customdatafieldView extends Ui.DataField {
         		paceValueMinutes = timePerUnit.toNumber();
         		paceValueSeconds = ((timePerUnit - paceValueMinutes) * 60).toNumber();
         	}
-        	paceText = paceValueMinutes.format("%d")+":"+paceValueSeconds.format("%02d");
+        	
+        	var tooSlowImperial = (System.getDeviceSettings().distanceUnits == System.UNIT_STATUTE) && paceValueMinutes > 15;
+        	var tooSlowMetric = (System.getDeviceSettings().distanceUnits == System.UNIT_METRIC) && paceValueMinutes > 9;
+        	
+        	if(tooSlowImperial || tooSlowMetric) {
+        		paceText = "--:--";
+        	} else {
+        		paceText = paceValueMinutes.format("%d")+":"+paceValueSeconds.format("%02d");
+        	}
         }else {
         	paceText = "--:--";
         }
         
-        dc.drawText(162, 54, valueSize, paceText, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(width * .75, height * .315, valueSize, paceText, Graphics.TEXT_JUSTIFY_CENTER);
+        System.println("Pace: " + currentSpeed);
+        
+		var lapPaceText;
+		var lapDistance = elapsedDistance - lapStartDistance;
+		var lapTime = (elapsedTime - lapStartTime) / 1000;
+		if(lapDistance > 0){
+			if(iteration % 10 == 0){
+				var lapSpeed = lapDistance / lapTime;
+				System.println("Lap Pace: " + lapSpeed);
+				var timePerUnit = convertToMinutesPerUnit(lapSpeed);
+				lapPaceValueMinutes = timePerUnit.toNumber();
+				lapPaceValueSeconds = ((timePerUnit - lapPaceValueMinutes) * 60).toNumber();
+			}
+			lapPaceText = lapPaceValueMinutes.format("%d")+":"+lapPaceValueSeconds.format("%02d");
+		}else {
+			lapPaceText = "--:--";
+		}
+		
+		dc.drawText(width * .75, height * .615, valueSize, lapPaceText, Graphics.TEXT_JUSTIFY_CENTER);
         
         var avgPaceText;
         if(averageSpeed > 0){
@@ -135,9 +181,9 @@ class customdatafieldView extends Ui.DataField {
         }else {
         	avgPaceText = "--:--";
         }
-        dc.drawText(162, 109, valueSize, avgPaceText, Graphics.TEXT_JUSTIFY_CENTER);
         
-		dc.drawText(53, 109, valueSize, cadenceValue.format("%d"), Graphics.TEXT_JUSTIFY_CENTER);
+		dc.drawText(width * .25, height * .615, valueSize, avgPaceText, Graphics.TEXT_JUSTIFY_CENTER);
+		System.println("Avg. Pace " + averageSpeed);
 		
 		var hrText;
         if (hrValue == 0) {
@@ -145,7 +191,7 @@ class customdatafieldView extends Ui.DataField {
         } else {
         	hrText = hrValue.format("%d");
 		}
-		dc.drawText(width / 2, 147, valueSize, hrText, Graphics.TEXT_JUSTIFY_CENTER);
+		dc.drawText(width / 2, height * .82, valueSize, hrText, Graphics.TEXT_JUSTIFY_CENTER);
 
     }
 

@@ -1,255 +1,340 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <debugInfo>
-<pcToLineNum>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="9" pc="268435456" symbol="initialize"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="10" pc="268435460" symbol="initialize"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="11" pc="268435478" symbol="initialize"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="12" pc="268435491" symbol="initialize"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="17" pc="268435505" symbol="onLayout"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="18" pc="268435509" symbol="onLayout"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="19" pc="268435516" symbol="onLayout"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="22" pc="268435535" symbol="onLayout"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="23" pc="268435558" symbol="onLayout"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="26" pc="268435604" symbol="onLayout"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="27" pc="268435627" symbol="onLayout"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="30" pc="268435673" symbol="onLayout"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="31" pc="268435696" symbol="onLayout"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="34" pc="268435742" symbol="onLayout"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="35" pc="268435765" symbol="onLayout"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="39" pc="268435811" symbol="onLayout"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="40" pc="268435854" symbol="onLayout"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="41" pc="268435878" symbol="onLayout"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="44" pc="268435902" symbol="onLayout"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="45" pc="268435939" symbol="onLayout"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="46" pc="268435976" symbol="onLayout"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="53" pc="268435980" symbol="compute"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="55" pc="268435984" symbol="compute"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="56" pc="268435995" symbol="compute"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="57" pc="268436008" symbol="compute"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="59" pc="268436027" symbol="compute"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="63" pc="268436043" symbol="compute"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="64" pc="268436054" symbol="compute"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="65" pc="268436067" symbol="compute"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="67" pc="268436086" symbol="compute"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="74" pc="268436103" symbol="onUpdate"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="76" pc="268436107" symbol="onUpdate"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="79" pc="268436150" symbol="onUpdate"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="80" pc="268436174" symbol="onUpdate"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="81" pc="268436198" symbol="onUpdate"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="82" pc="268436225" symbol="onUpdate"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="83" pc="268436249" symbol="onUpdate"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="85" pc="268436276" symbol="onUpdate"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="86" pc="268436300" symbol="onUpdate"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="88" pc="268436324" symbol="onUpdate"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="89" pc="268436358" symbol="onUpdate"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldView.mc" lineNum="92" pc="268436392" symbol="onUpdate"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldApp.mc" lineNum="5" pc="268436413" symbol="initialize"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldApp.mc" lineNum="6" pc="268436417" symbol="initialize"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldApp.mc" lineNum="10" pc="268436436" symbol="onStart"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldApp.mc" lineNum="14" pc="268436441" symbol="onStop"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldApp.mc" lineNum="18" pc="268436446" symbol="getInitialView"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldApp.mc" lineNum="19" pc="268436450" symbol="getInitialView"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldBackground.mc" lineNum="9" pc="268436488" symbol="initialize"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldBackground.mc" lineNum="10" pc="268436492" symbol="initialize"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldBackground.mc" lineNum="14" pc="268436513" symbol="initialize"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldBackground.mc" lineNum="17" pc="268436534" symbol="setColor"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldBackground.mc" lineNum="18" pc="268436538" symbol="setColor"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldBackground.mc" lineNum="21" pc="268436549" symbol="draw"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldBackground.mc" lineNum="22" pc="268436553" symbol="draw"/>
-<entry filename="D:\\Documents\\Development\\eclipse-workspace\\custom-data-field\\.\\source\\customdatafieldBackground.mc" lineNum="23" pc="268436585" symbol="draw"/>
-<entry filename="Rez" lineNum="19" pc="268436598" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="23" pc="268436610" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="24" pc="268436634" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="25" pc="268436782" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="26" pc="268436807" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="27" pc="268436859" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="28" pc="268437007" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="29" pc="268437032" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="30" pc="268437084" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="31" pc="268437232" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="32" pc="268437257" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="33" pc="268437309" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="34" pc="268437457" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="35" pc="268437482" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="38" pc="268437534" symbol="MainLayout"/>
-<entry filename="Rez" lineNum="47" pc="268437592" symbol="TopLeftLayout"/>
-<entry filename="Rez" lineNum="51" pc="268437604" symbol="TopLeftLayout"/>
-<entry filename="Rez" lineNum="52" pc="268437628" symbol="TopLeftLayout"/>
-<entry filename="Rez" lineNum="53" pc="268437761" symbol="TopLeftLayout"/>
-<entry filename="Rez" lineNum="56" pc="268437894" symbol="TopLeftLayout"/>
-<entry filename="Rez" lineNum="65" pc="268437932" symbol="TopRightLayout"/>
-<entry filename="Rez" lineNum="69" pc="268437944" symbol="TopRightLayout"/>
-<entry filename="Rez" lineNum="70" pc="268437968" symbol="TopRightLayout"/>
-<entry filename="Rez" lineNum="71" pc="268438101" symbol="TopRightLayout"/>
-<entry filename="Rez" lineNum="74" pc="268438234" symbol="TopRightLayout"/>
-<entry filename="Rez" lineNum="83" pc="268438272" symbol="BottomLeftLayout"/>
-<entry filename="Rez" lineNum="87" pc="268438284" symbol="BottomLeftLayout"/>
-<entry filename="Rez" lineNum="88" pc="268438308" symbol="BottomLeftLayout"/>
-<entry filename="Rez" lineNum="89" pc="268438441" symbol="BottomLeftLayout"/>
-<entry filename="Rez" lineNum="92" pc="268438574" symbol="BottomLeftLayout"/>
-<entry filename="Rez" lineNum="101" pc="268438612" symbol="BottomRightLayout"/>
-<entry filename="Rez" lineNum="105" pc="268438624" symbol="BottomRightLayout"/>
-<entry filename="Rez" lineNum="106" pc="268438648" symbol="BottomRightLayout"/>
-<entry filename="Rez" lineNum="107" pc="268438781" symbol="BottomRightLayout"/>
-<entry filename="Rez" lineNum="110" pc="268438914" symbol="BottomRightLayout"/>
-</pcToLineNum>
-<symbolTable>
-<entry id="8389124" method="true" symbol="onUpdate"/>
-<entry id="8389349" symbol="justification"/>
-<entry id="17" method="true" symbol="TopLeftLayout"/>
-<entry field="true" id="8388611" module="true" symbol="Toybox"/>
-<entry id="8388770" module="true" object="true" symbol="Strings"/>
-<entry field="true" id="8389138" symbol="label"/>
-<entry id="19" method="true" symbol="BottomLeftLayout"/>
-<entry id="8389280" method="true" symbol="getInitialView"/>
-<entry id="8389068" method="true" symbol="draw"/>
-<entry id="16" method="true" symbol="MainLayout"/>
-<entry id="8388769" module="true" object="true" symbol="Rez"/>
-<entry field="true" id="8389130" symbol="mColor"/>
-<entry id="8389131" method="true" symbol="setColor"/>
-<entry field="true" id="11" symbol="mValue"/>
-<entry id="8388702" method="true" symbol="initialize"/>
-<entry field="true" id="21" symbol="AppName"/>
-<entry id="8390146" module="true" object="true" symbol="Background"/>
-<entry field="true" id="15" symbol="LauncherIcon"/>
-<entry id="8389281" method="true" symbol="onStop"/>
-<entry field="true" id="8389065" symbol="locY"/>
-<entry field="true" id="8389064" symbol="locX"/>
-<entry field="true" id="8388750" symbol="currentCadence"/>
-<entry id="8388771" module="true" object="true" symbol="Drawables"/>
-<entry id="8389137" method="true" symbol="compute"/>
-<entry id="8389122" method="true" symbol="onLayout"/>
-<entry id="8389279" method="true" symbol="onStart"/>
-<entry id="18" method="true" symbol="TopRightLayout"/>
-<entry field="true" id="8388747" symbol="currentHeartRate"/>
-<entry id="8389348" symbol="font"/>
-<entry id="8389347" symbol="color"/>
-<entry id="9" object="true" symbol="customdatafieldView"/>
-<entry id="14" module="true" symbol="Layouts"/>
-<entry id="20" method="true" symbol="BottomRightLayout"/>
-<entry id="8390088" module="true" object="true" symbol="JsonData"/>
-<entry field="true" id="12" symbol="sValue"/>
-<entry field="true" id="8389063" symbol="identifier"/>
-<entry id="13" module="true" symbol="Menus"/>
-<entry id="10" object="true" symbol="customdatafieldApp"/>
-<entry id="8388772" module="true" object="true" symbol="Fonts"/>
-</symbolTable>
-<localVars>
-<entry endPc="268435902" name="valueView" stackId="5" startPc="268435811"/>
-<entry endPc="268435902" name="labelView" stackId="4" startPc="268435811"/>
-<entry endPc="268435979" name="label" stackId="2" startPc="268435509"/>
-<entry endPc="268435979" name="obscurityFlags" stackId="3" startPc="268435509"/>
-<entry endPc="268435980" name="dc" stackId="1" startPc="268435505"/>
-<entry endPc="268436103" name="info" stackId="1" startPc="268435980"/>
-<entry endPc="268436412" name="value2" stackId="3" startPc="268436107"/>
-<entry endPc="268436412" name="value" stackId="2" startPc="268436107"/>
-<entry endPc="268436413" name="dc" stackId="1" startPc="268436103"/>
-<entry endPc="268436441" name="state" stackId="1" startPc="268436436"/>
-<entry endPc="268436446" name="state" stackId="1" startPc="268436441"/>
-<entry endPc="268436533" name="dictionary" stackId="1" startPc="268436492"/>
-<entry endPc="268436549" name="color" stackId="1" startPc="268436534"/>
-<entry endPc="268436598" name="dc" stackId="1" startPc="268436549"/>
-<entry endPc="268437591" name="rez_cmp_local_bitmap_SecondLabel_fontHeight" stackId="8" startPc="268436610"/>
-<entry endPc="268437591" name="rez_cmp_local_bitmap_MainValue_fontHeight" stackId="6" startPc="268436610"/>
-<entry endPc="268437591" name="rez_cmp_local_bitmap_MainLabel_fontHeight" stackId="4" startPc="268436610"/>
-<entry endPc="268437591" name="rez_cmp_local_custom_drawable_99DVAUM222D3KTFS1M8U" stackId="2" startPc="268436610"/>
-<entry endPc="268437591" name="rez_cmp_local_bitmap_MainLabel" stackId="3" startPc="268436610"/>
-<entry endPc="268437591" name="rez_cmp_local_bitmap_MainValue" stackId="5" startPc="268436610"/>
-<entry endPc="268437591" name="rez_cmp_local_bitmap_SecondLabel" stackId="7" startPc="268436610"/>
-<entry endPc="268437591" name="rez_cmp_local_bitmap_SecondValue_fontHeight" stackId="10" startPc="268436610"/>
-<entry endPc="268437591" name="rez_cmp_local_bitmap_SecondValue" stackId="9" startPc="268436610"/>
-<entry endPc="268437592" name="dc" stackId="1" startPc="268436598"/>
-<entry endPc="268437931" name="rez_cmp_local_bitmap_label" stackId="3" startPc="268437604"/>
-<entry endPc="268437931" name="rez_cmp_local_custom_drawable_BJ49JJG4OIZTRI24X7A0" stackId="2" startPc="268437604"/>
-<entry endPc="268437931" name="rez_cmp_local_bitmap_value" stackId="4" startPc="268437604"/>
-<entry endPc="268437932" name="dc" stackId="1" startPc="268437592"/>
-<entry endPc="268438271" name="rez_cmp_local_bitmap_label" stackId="3" startPc="268437944"/>
-<entry endPc="268438271" name="rez_cmp_local_bitmap_value" stackId="4" startPc="268437944"/>
-<entry endPc="268438271" name="rez_cmp_local_custom_drawable_OWT2WQG91YRZ1D6IEQCI" stackId="2" startPc="268437944"/>
-<entry endPc="268438272" name="dc" stackId="1" startPc="268437932"/>
-<entry endPc="268438611" name="rez_cmp_local_bitmap_label" stackId="3" startPc="268438284"/>
-<entry endPc="268438611" name="rez_cmp_local_bitmap_value" stackId="4" startPc="268438284"/>
-<entry endPc="268438611" name="rez_cmp_local_custom_drawable_JX92BQMFTD0HN07Y7UKQ" stackId="2" startPc="268438284"/>
-<entry endPc="268438612" name="dc" stackId="1" startPc="268438272"/>
-<entry endPc="268438951" name="rez_cmp_local_bitmap_label" stackId="3" startPc="268438624"/>
-<entry endPc="268438951" name="rez_cmp_local_bitmap_value" stackId="4" startPc="268438624"/>
-<entry endPc="268438951" name="rez_cmp_local_custom_drawable_EQ2PJHAQK6B4QNO1CQ0N" stackId="2" startPc="268438624"/>
-<entry endPc="268438952" name="dc" stackId="1" startPc="268438612"/>
-</localVars>
-<annotations/>
-<functions>
-<functionEntry accessMode="public" name="initialize" parent="customdatafieldView">
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="public" name="onLayout" parent="customdatafieldView">
-<param id="dc"/>
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="public" name="compute" parent="customdatafieldView">
-<param id="info"/>
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="public" name="onUpdate" parent="customdatafieldView">
-<param id="dc"/>
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="public" name="initialize" parent="customdatafieldApp">
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="public" name="onStart" parent="customdatafieldApp">
-<param id="state"/>
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="public" name="onStop" parent="customdatafieldApp">
-<param id="state"/>
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="public" name="getInitialView" parent="customdatafieldApp">
-<documentation><![CDATA[<div class="description"> Return the initial view of your application here<br/></div>]]></documentation>
-</functionEntry>
-<functionEntry accessMode="public" name="initialize" parent="Background">
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="public" name="setColor" parent="Background">
-<param id="color"/>
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="public" name="draw" parent="Background">
-<param id="dc"/>
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="public" name="MainLayout" parent="Layouts">
-<param id="dc"/>
-<documentation><![CDATA[<div class="description"> Draw the layout<br/> param The context<br/></div>]]></documentation>
-</functionEntry>
-<functionEntry accessMode="public" name="TopLeftLayout" parent="Layouts">
-<param id="dc"/>
-<documentation><![CDATA[<div class="description"> Draw the layout<br/> param The context<br/></div>]]></documentation>
-</functionEntry>
-<functionEntry accessMode="public" name="TopRightLayout" parent="Layouts">
-<param id="dc"/>
-<documentation><![CDATA[<div class="description"> Draw the layout<br/> param The context<br/></div>]]></documentation>
-</functionEntry>
-<functionEntry accessMode="public" name="BottomLeftLayout" parent="Layouts">
-<param id="dc"/>
-<documentation><![CDATA[<div class="description"> Draw the layout<br/> param The context<br/></div>]]></documentation>
-</functionEntry>
-<functionEntry accessMode="public" name="BottomRightLayout" parent="Layouts">
-<param id="dc"/>
-<documentation><![CDATA[<div class="description"> Draw the layout<br/> param The context<br/></div>]]></documentation>
-</functionEntry>
-</functions>
-<dataEntryOffsetMappings>
-<dataEntry offset="87" parentId="" symbolId="globals" type="module"/>
-<dataEntry offset="182" parentId="globals" symbolId="Background" type="class"/>
-<dataEntry offset="253" parentId="globals" symbolId="customdatafieldView" type="class"/>
-<dataEntry offset="340" parentId="globals" symbolId="Rez" type="module"/>
-<dataEntry offset="419" parentId="Rez" symbolId="Drawables" type="module"/>
-<dataEntry offset="458" parentId="Rez" symbolId="Menus" type="module"/>
-<dataEntry offset="489" parentId="Rez" symbolId="Fonts" type="module"/>
-<dataEntry offset="520" parentId="Rez" symbolId="JsonData" type="module"/>
-<dataEntry offset="551" parentId="Rez" symbolId="Layouts" type="module"/>
-<dataEntry offset="622" parentId="Rez" symbolId="Strings" type="module"/>
-<dataEntry offset="669" parentId="globals" symbolId="customdatafieldApp" type="class"/>
-</dataEntryOffsetMappings>
+    <pcToLineNum>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="3" lineNum="25" pc="268435456" symbol="initialize"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="3" lineNum="26" pc="268435460" symbol="initialize"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="4" lineNum="29" pc="268435479" symbol="convertToMinutesPerUnit"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="4" lineNum="30" pc="268435483" symbol="convertToMinutesPerUnit"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="4" lineNum="31" pc="268435524" symbol="convertToMinutesPerUnit"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="4" lineNum="33" pc="268435536" symbol="convertToMinutesPerUnit"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="5" lineNum="41" pc="268435546" symbol="compute"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="5" lineNum="43" pc="268435550" symbol="compute"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="5" lineNum="44" pc="268435587" symbol="compute"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="5" lineNum="45" pc="268435624" symbol="compute"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="5" lineNum="46" pc="268435649" symbol="compute"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="5" lineNum="47" pc="268435674" symbol="compute"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="5" lineNum="48" pc="268435711" symbol="compute"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="5" lineNum="49" pc="268435761" symbol="compute"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="5" lineNum="50" pc="268435798" symbol="compute"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="5" lineNum="51" pc="268435835" symbol="compute"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="6" lineNum="55" pc="268435873" symbol="onTimerLap"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="6" lineNum="56" pc="268435877" symbol="onTimerLap"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="6" lineNum="57" pc="268435893" symbol="onTimerLap"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="62" pc="268435910" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="64" pc="268435914" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="66" pc="268435933" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="67" pc="268435946" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="69" pc="268435959" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="70" pc="268435972" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="71" pc="268436025" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="72" pc="268436078" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="73" pc="268436094" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="75" pc="268436110" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="76" pc="268436142" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="79" pc="268436186" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="80" pc="268436202" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="83" pc="268436228" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="84" pc="268436268" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="85" pc="268436285" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="86" pc="268436320" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="87" pc="268436355" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="88" pc="268436390" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="91" pc="268436434" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="92" pc="268436450" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="93" pc="268436491" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="96" pc="268436510" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="97" pc="268436542" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="100" pc="268436574" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="101" pc="268436602" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="102" pc="268436645" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="103" pc="268436694" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="104" pc="268436743" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="105" pc="268436792" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="106" pc="268436841" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="108" pc="268436890" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="110" pc="268436918" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="112" pc="268436966" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="113" pc="268436966" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="114" pc="268436991" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="115" pc="268437024" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="116" pc="268437043" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="117" pc="268437068" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="119" pc="268437093" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="120" pc="268437104" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="121" pc="268437168" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="123" pc="268437229" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="124" pc="268437270" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="127" pc="268437319" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="128" pc="268437326" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="131" pc="268437372" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="133" pc="268437372" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="134" pc="268437389" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="135" pc="268437432" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="136" pc="268437453" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="137" pc="268437472" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="140" pc="268437509" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="141" pc="268437569" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="143" pc="268437629" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="144" pc="268437642" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="146" pc="268437652" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="149" pc="268437708" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="152" pc="268437715" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="153" pc="268437761" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="155" pc="268437793" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="156" pc="268437793" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="157" pc="268437812" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="158" pc="268437837" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="159" pc="268437848" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="160" pc="268437871" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="161" pc="268437878" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="162" pc="268437904" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="163" pc="268437919" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="164" pc="268437938" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="166" pc="268437975" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="168" pc="268438031" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="171" pc="268438038" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="173" pc="268438084" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="174" pc="268438084" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="175" pc="268438101" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="176" pc="268438124" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="177" pc="268438145" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="178" pc="268438164" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="180" pc="268438201" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="182" pc="268438257" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="185" pc="268438264" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="186" pc="268438310" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="188" pc="268438342" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="189" pc="268438342" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="190" pc="268438359" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="192" pc="268438369" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldView.mc" id="7" lineNum="194" pc="268438393" symbol="onUpdate"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldApp.mc" id="9" lineNum="5" pc="268438440" symbol="initialize"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldApp.mc" id="9" lineNum="6" pc="268438444" symbol="initialize"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldApp.mc" id="10" lineNum="10" pc="268438463" symbol="onStart"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldApp.mc" id="11" lineNum="14" pc="268438468" symbol="onStop"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldApp.mc" id="12" lineNum="18" pc="268438473" symbol="getInitialView"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldApp.mc" id="12" lineNum="19" pc="268438477" symbol="getInitialView"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldBackground.mc" id="14" lineNum="9" pc="268438515" symbol="initialize"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldBackground.mc" id="14" lineNum="10" pc="268438519" symbol="initialize"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldBackground.mc" id="14" lineNum="14" pc="268438540" symbol="initialize"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldBackground.mc" id="15" lineNum="17" pc="268438561" symbol="setColor"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldBackground.mc" id="15" lineNum="18" pc="268438565" symbol="setColor"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldBackground.mc" id="16" lineNum="21" pc="268438576" symbol="draw"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldBackground.mc" id="16" lineNum="22" pc="268438580" symbol="draw"/>
+        <entry filename="/Users/matthewconrad/development/garmin-data-field/source/customdatafieldBackground.mc" id="16" lineNum="23" pc="268438612" symbol="draw"/>
+        <entry filename="Rez" id="20" lineNum="11" pc="268438625" symbol="initialize"/>
+        <entry filename="Rez" id="20" lineNum="12" pc="268438629" symbol="initialize"/>
+        <entry filename="Rez" id="21" lineNum="15" pc="268438654" symbol="draw"/>
+        <entry filename="Rez" id="21" lineNum="16" pc="268438658" symbol="draw"/>
+        <entry filename="Rez" id="21" lineNum="19" pc="268438671" symbol="draw"/>
+        <entry filename="Rez" id="21" lineNum="20" pc="268438707" symbol="draw"/>
+        <entry filename="Rez" id="21" lineNum="22" pc="268438754" symbol="draw"/>
+        <entry filename="Rez" id="21" lineNum="23" pc="268438790" symbol="draw"/>
+        <entry filename="Rez" id="21" lineNum="25" pc="268438873" symbol="draw"/>
+        <entry filename="Rez" id="21" lineNum="26" pc="268438909" symbol="draw"/>
+        <entry filename="Rez" id="21" lineNum="28" pc="268438956" symbol="draw"/>
+        <entry filename="Rez" id="21" lineNum="29" pc="268438992" symbol="draw"/>
+        <entry filename="Rez" id="25" lineNum="46" pc="268439052" symbol="MainLayout"/>
+        <entry filename="Rez" id="25" lineNum="48" pc="268439064" symbol="MainLayout"/>
+        <entry filename="Rez" id="25" lineNum="50" pc="268439077" symbol="MainLayout"/>
+        <entry filename="Rez" id="25" lineNum="51" pc="268439101" symbol="MainLayout"/>
+        <entry filename="Rez" id="25" lineNum="52" pc="268439141" symbol="MainLayout"/>
+        <entry filename="Rez" id="25" lineNum="53" pc="268439154" symbol="MainLayout"/>
+        <entry filename="Rez" id="25" lineNum="55" pc="268439170" symbol="MainLayout"/>
+        <entry filename="Rez" id="25" lineNum="56" pc="268439306" symbol="MainLayout"/>
+        <entry filename="Rez" id="25" lineNum="57" pc="268439439" symbol="MainLayout"/>
+        <entry filename="Rez" id="25" lineNum="58" pc="268439572" symbol="MainLayout"/>
+        <entry filename="Rez" id="25" lineNum="59" pc="268439705" symbol="MainLayout"/>
+        <entry filename="Rez" id="25" lineNum="60" pc="268439838" symbol="MainLayout"/>
+        <entry filename="Rez" id="25" lineNum="61" pc="268439971" symbol="MainLayout"/>
+        <entry filename="Rez" id="25" lineNum="62" pc="268440104" symbol="MainLayout"/>
+        <entry filename="Rez" id="25" lineNum="63" pc="268440237" symbol="MainLayout"/>
+        <entry filename="Rez" id="25" lineNum="64" pc="268440370" symbol="MainLayout"/>
+        <entry filename="Rez" id="25" lineNum="65" pc="268440503" symbol="MainLayout"/>
+        <entry filename="Rez" id="25" lineNum="67" pc="268440639" symbol="MainLayout"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry field="true" id="22" symbol="cadenceValue"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry field="true" id="20" symbol="avgPaceValueMinutes"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="17" symbol="paceValueSeconds"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry field="true" id="8389138" symbol="label"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389068" method="true" symbol="draw"/>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="30" method="true" symbol="MainLayout"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry field="true" id="19" symbol="lapPaceValueSeconds"/>
+        <entry field="true" id="8389130" symbol="mColor"/>
+        <entry id="8389131" method="true" symbol="setColor"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry field="true" id="31" symbol="AppName"/>
+        <entry field="true" id="13" symbol="lapStartTime"/>
+        <entry id="8390146" module="true" object="true" symbol="Background"/>
+        <entry field="true" id="28" symbol="LauncherIcon"/>
+        <entry field="true" id="14" symbol="lapTime"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389137" method="true" symbol="compute"/>
+        <entry field="true" id="8388732" symbol="elapsedTime"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry field="true" id="8388738" symbol="currentSpeed"/>
+        <entry field="true" id="8388734" symbol="elapsedDistance"/>
+        <entry id="8389348" symbol="font"/>
+        <entry field="true" id="12" symbol="lapDistance"/>
+        <entry field="true" id="21" symbol="avgPaceValueSeconds"/>
+        <entry id="8389347" symbol="color"/>
+        <entry id="25" method="true" symbol="convertToMinutesPerUnit"/>
+        <entry id="9" object="true" symbol="customdatafieldView"/>
+        <entry field="true" id="15" symbol="lapSpeed"/>
+        <entry field="true" id="8388739" symbol="averageSpeed"/>
+        <entry field="true" id="24" symbol="iteration"/>
+        <entry id="26" module="true" symbol="Layouts"/>
+        <entry field="true" id="23" symbol="hrValue"/>
+        <entry field="true" id="18" symbol="lapPaceValueMinutes"/>
+        <entry id="8390088" module="true" object="true" symbol="JsonData"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="27" module="true" symbol="Menus"/>
+        <entry id="8389751" method="true" symbol="onTimerLap"/>
+        <entry id="10" object="true" symbol="customdatafieldApp"/>
+        <entry field="true" id="16" symbol="paceValueMinutes"/>
+        <entry field="true" id="11" symbol="lapStartDistance"/>
+        <entry id="29" object="true" symbol="frameDrawable"/>
+        <entry id="8388772" module="true" object="true" symbol="Fonts"/>
+    </symbolTable>
+    <localVars>
+        <entry endPc="268435546" name="speed" stackId="1" startPc="268435479"/>
+        <entry endPc="268435873" name="info" stackId="1" startPc="268435546"/>
+        <entry endPc="268437316" name="timerValueMinutes" stackId="17" startPc="268437024"/>
+        <entry endPc="268437316" name="timerValueSeconds" stackId="18" startPc="268437024"/>
+        <entry endPc="268437316" name="timerValueHours" stackId="16" startPc="268437024"/>
+        <entry endPc="268437506" name="timePerUnit" stackId="20" startPc="268437432"/>
+        <entry endPc="268437705" name="tooSlowMetric" stackId="22" startPc="268437389"/>
+        <entry endPc="268437705" name="tooSlowImperial" stackId="21" startPc="268437389"/>
+        <entry endPc="268437972" name="lapSpeed" stackId="26" startPc="268437871"/>
+        <entry endPc="268437972" name="timePerUnit" stackId="27" startPc="268437871"/>
+        <entry endPc="268438198" name="timePerUnit" stackId="29" startPc="268438124"/>
+        <entry endPc="268438439" name="backgroundColor" stackId="4" startPc="268435914"/>
+        <entry endPc="268438439" name="valueSize" stackId="7" startPc="268435914"/>
+        <entry endPc="268438439" name="distanceValue" stackId="11" startPc="268435914"/>
+        <entry endPc="268438439" name="distanceSize" stackId="10" startPc="268435914"/>
+        <entry endPc="268438439" name="paceText" stackId="19" startPc="268435914"/>
+        <entry endPc="268438439" name="labelSize" stackId="8" startPc="268435914"/>
+        <entry endPc="268438439" name="avgPaceText" stackId="28" startPc="268435914"/>
+        <entry endPc="268438439" name="distanceYPosition" stackId="9" startPc="268435914"/>
+        <entry endPc="268438439" name="seconds" stackId="15" startPc="268435914"/>
+        <entry endPc="268438439" name="lapDistance" stackId="24" startPc="268435914"/>
+        <entry endPc="268438439" name="lapTime" stackId="25" startPc="268435914"/>
+        <entry endPc="268438439" name="timeText" stackId="14" startPc="268435914"/>
+        <entry endPc="268438439" name="height" stackId="3" startPc="268435914"/>
+        <entry endPc="268438439" name="distanceLabelX" stackId="12" startPc="268435914"/>
+        <entry endPc="268438439" name="valueColor" stackId="5" startPc="268435914"/>
+        <entry endPc="268438439" name="width" stackId="2" startPc="268435914"/>
+        <entry endPc="268438439" name="lapPaceText" stackId="23" startPc="268435914"/>
+        <entry endPc="268438439" name="hrText" stackId="30" startPc="268435914"/>
+        <entry endPc="268438439" name="labelColor" stackId="6" startPc="268435914"/>
+        <entry endPc="268438439" name="distanceXPosition" stackId="13" startPc="268435914"/>
+        <entry endPc="268438440" name="dc" stackId="1" startPc="268435910"/>
+        <entry endPc="268438468" name="state" stackId="1" startPc="268438463"/>
+        <entry endPc="268438473" name="state" stackId="1" startPc="268438468"/>
+        <entry endPc="268438560" name="dictionary" stackId="1" startPc="268438519"/>
+        <entry endPc="268438576" name="color" stackId="1" startPc="268438561"/>
+        <entry endPc="268438625" name="dc" stackId="1" startPc="268438576"/>
+        <entry endPc="268439051" name="rez_cmp_local_var_dc_getWidth" stackId="2" startPc="268438658"/>
+        <entry endPc="268439052" name="dc" stackId="1" startPc="268438654"/>
+        <entry endPc="268440776" name="rez_cmp_local_text_DistanceValue" stackId="5" startPc="268439064"/>
+        <entry endPc="268440776" name="rez_cmp_local_custom_drawable_45441037912629253541" stackId="3" startPc="268439064"/>
+        <entry endPc="268440776" name="rez_cmp_local_var_dc_getWidth" stackId="2" startPc="268439064"/>
+        <entry endPc="268440776" name="rez_cmp_local_text_TimeLabel" stackId="6" startPc="268439064"/>
+        <entry endPc="268440776" name="rez_cmp_local_text_TimeValue" stackId="7" startPc="268439064"/>
+        <entry endPc="268440776" name="rez_cmp_local_text_PaceLabel" stackId="8" startPc="268439064"/>
+        <entry endPc="268440776" name="rez_cmp_local_text_PaceValue" stackId="9" startPc="268439064"/>
+        <entry endPc="268440776" name="rez_cmp_local_text_CadenceLabel" stackId="10" startPc="268439064"/>
+        <entry endPc="268440776" name="rez_cmp_local_text_CadenceValue" stackId="11" startPc="268439064"/>
+        <entry endPc="268440776" name="rez_cmp_local_custom_drawable_frameDrawable" stackId="4" startPc="268439064"/>
+        <entry endPc="268440776" name="rez_cmp_local_text_AvgPaceLabel" stackId="12" startPc="268439064"/>
+        <entry endPc="268440776" name="rez_cmp_local_text_HRLabel" stackId="14" startPc="268439064"/>
+        <entry endPc="268440776" name="rez_cmp_local_text_AvgPaceValue" stackId="13" startPc="268439064"/>
+        <entry endPc="268440776" name="rez_cmp_local_text_HRValue" stackId="15" startPc="268439064"/>
+        <entry endPc="268440777" name="dc" stackId="1" startPc="268439052"/>
+    </localVars>
+    <annotations/>
+    <dataEntryOffsetMappings>
+        <dataEntry offset="87" parentId="" symbolId="globals" type="module"/>
+        <dataEntry offset="158" parentId="globals" symbolId="Background" type="class"/>
+        <dataEntry offset="229" parentId="globals" symbolId="customdatafieldView" type="class"/>
+        <dataEntry offset="452" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry offset="531" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry offset="578" parentId="Drawables" symbolId="frameDrawable" type="class"/>
+        <dataEntry offset="633" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry offset="664" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry offset="695" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry offset="734" parentId="Rez" symbolId="JsonData" type="module"/>
+        <dataEntry offset="765" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry offset="812" parentId="globals" symbolId="customdatafieldApp" type="class"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" name="initialize" parent="customdatafieldView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="convertToMinutesPerUnit" parent="customdatafieldView">
+            <param id="speed"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="compute" parent="customdatafieldView">
+            <param id="info"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onTimerLap" parent="customdatafieldView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onUpdate" parent="customdatafieldView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="customdatafieldApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStart" parent="customdatafieldApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStop" parent="customdatafieldApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getInitialView" parent="customdatafieldApp">
+            <documentation>
+                <![CDATA[<div class="description"> Return the initial view of your application here<br/></div>]]>
+            </documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="Background">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="setColor" parent="Background">
+            <param id="color"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="draw" parent="Background">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="frameDrawable">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="draw" parent="frameDrawable">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="MainLayout" parent="Layouts">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
 </debugInfo>
